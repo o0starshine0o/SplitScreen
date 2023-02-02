@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "SplitScreen",
+    "version": "0.0.1",
+    "description": "split screen to list and detail",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        },
+        "default_title": "stock helper",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "scripting",
+        "webNavigation"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/split-screen.js"
+            ],
+            "matches": [
+                "*://*/*"
+            ]
+        }
+    ]
+}
