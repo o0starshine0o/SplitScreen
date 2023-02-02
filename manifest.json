@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "SplitScreen",
     "version": "0.0.1",
-    "description": "split screen to list and detail",
+    "description": "split screen to main and detail",
     "icons": {
         "16": "images/icon16.png",
         "48": "images/icon48.png",
@@ -13,8 +13,7 @@
             "19": "images/icon19.png",
             "38": "images/icon38.png"
         },
-        "default_title": "stock helper",
-        "default_popup": "popup.html"
+        "default_title": "SplitScreen"
     },
     "permissions": [
         "activeTab",
@@ -32,7 +31,8 @@
             ],
             "matches": [
                 "*://*/*"
-            ]
+            ],
+            "all_frames": true
         }
     ]
 }

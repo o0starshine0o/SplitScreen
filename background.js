@@ -1,11 +1,13 @@
 function reddenPage(pageUrl, linkUrl) {
-    if (document.hasOwnProperty('parent')) {
-        document.parent.document.write('<html><head></head><frameset cols=\'50%25,*\'><frame src=' + pageUrl + '><frame src=' + linkUrl + '></frameset ></html>')
-    } else {
-        console.log(parent)
-        document.write('<html><head></head><frameset cols=\'50%25,*\'><frame src=' + pageUrl + '><frame src=' + linkUrl + '></frameset ></html>')
-
-    }
+    document.write(
+        '<html>' +
+        '<head></head>' +
+        '<frameset cols=\'50%,*\' frameborder=\'1\'>' +
+        '<frame name=\'mainFrame\' src=' + pageUrl + '>' +
+        '<frame name=\'detailFrame\' src=' + linkUrl + '>' +
+        '</frameset >' +
+        '</html>'
+    )
 }
 
 chrome.contextMenus.create({
