@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "SplitScreen",
     "version": "0.0.1",
-    "description": "split screen to main and detail",
+    "description": "Split screen into main and detail in current tab",
     "icons": {
         "16": "images/icon16.png",
         "48": "images/icon48.png",
